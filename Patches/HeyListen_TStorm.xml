@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<Patch>
+
+  <Operation Class="XmlExtensions.OptionalPatch">
+    <modId>HeyListen</modId>
+    <key>HeyListenTStorm</key>
+    <defaultValue>false</defaultValue>  
+    <caseTrue>
+
+      <Operation Class="PatchOperationAdd">
+          <xpath>Defs/ThingDef[defName="FF_Firefly"]/comps</xpath>
+          <value>
+            <li Class="AnimalBehaviours.CompProperties_ChangeWeather">
+              <weatherDef>DryThunderstorm</weatherDef>
+            </li>
+          </value>
+      </Operation>
+
+    </caseTrue>
+  </Operation>
+
+</Patch>

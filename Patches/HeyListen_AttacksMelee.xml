@@ -1,0 +1,104 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<Patch>
+
+<Operation Class="XmlExtensions.OptionalPatch">
+    <modId>HeyListen</modId>
+    <key>HeyListenHeadbutt</key>
+    <defaultValue>false</defaultValue>
+    <caseTrue>
+
+  <Operation Class="XmlExtensions.PatchOperationSafeAdd">
+          <xpath>Defs/ThingDef[defName="FF_Firefly"]</xpath>
+          <value>
+            <tools>
+              <li>
+                <label>head</label>
+                <capacities>
+                  <li>Blunt</li>
+                </capacities>
+                <power>4</power>
+                <cooldownTime>2</cooldownTime>
+                <linkedBodyPartsGroup>HeadAttackTool</linkedBodyPartsGroup>
+                <ensureLinkedBodyPartsGroupAlwaysUsable>true</ensureLinkedBodyPartsGroupAlwaysUsable>
+                <chanceFactor>1.0</chanceFactor>
+              </li>
+            </tools>
+          </value>
+  </Operation>
+
+    </caseTrue>
+</Operation>
+
+<Operation Class="XmlExtensions.OptionalPatch">
+    <modId>HeyListen</modId>
+    <key>HeyListenFlameButt</key>
+    <defaultValue>false</defaultValue>
+    <caseTrue>
+
+  <Operation Class="XmlExtensions.PatchOperationSafeAdd">
+          <xpath>Defs/ThingDef[defName="FF_Firefly"]</xpath>
+          <value>
+            <tools>
+              <li>
+                <label>head</label>
+                <capacities>
+                  <li>Blunt</li>
+                </capacities>
+                <power>4</power>
+                <cooldownTime>2</cooldownTime>
+                <linkedBodyPartsGroup>HeadAttackTool</linkedBodyPartsGroup>
+                <ensureLinkedBodyPartsGroupAlwaysUsable>true</ensureLinkedBodyPartsGroupAlwaysUsable>
+                <chanceFactor>0.5</chanceFactor>
+                <surpriseAttack>
+                  <extraMeleeDamages>
+                    <li>
+                      <def>Flame</def>
+                      <amount>4</amount>
+                    </li>
+                  </extraMeleeDamages>
+                </surpriseAttack>
+              </li>
+            </tools>
+          </value>
+  </Operation>
+
+    </caseTrue>
+</Operation>
+
+<Operation Class="XmlExtensions.OptionalPatch">
+    <modId>HeyListen</modId>
+    <key>HeyListenStunButt</key>
+    <defaultValue>false</defaultValue>
+    <caseTrue>
+
+  <Operation Class="XmlExtensions.PatchOperationSafeAdd">
+          <xpath>Defs/ThingDef[defName="FF_Firefly"]</xpath>
+          <value>
+            <tools>
+              <li>
+                <label>head</label>
+                <capacities>
+                  <li>Blunt</li>
+                </capacities>
+                <power>4</power>
+                <cooldownTime>2</cooldownTime>
+                <linkedBodyPartsGroup>HeadAttackTool</linkedBodyPartsGroup>
+                <ensureLinkedBodyPartsGroupAlwaysUsable>true</ensureLinkedBodyPartsGroupAlwaysUsable>
+                <chanceFactor>0.5</chanceFactor>
+                <surpriseAttack>
+                  <extraMeleeDamages>
+                    <li>
+                      <def>Stun</def>
+                      <amount>4</amount>
+                    </li>
+                  </extraMeleeDamages>
+                </surpriseAttack>
+              </li>
+            </tools>
+          </value>
+  </Operation>
+
+    </caseTrue>
+</Operation>
+
+</Patch>

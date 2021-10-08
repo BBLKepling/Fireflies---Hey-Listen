@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<Patch>
+
+  <Operation Class="XmlExtensions.OptionalPatch">
+    <modId>HeyListen</modId>
+    <key>HeyListenFireStart</key>
+    <defaultValue>false</defaultValue>  
+    <caseTrue>
+
+      <Operation Class="PatchOperationAdd">
+          <xpath>Defs/ThingDef[defName="FF_Firefly"]/comps</xpath>
+          <value>
+            <li Class="AnimalBehaviours.CompProperties_BuildPeriodically">
+              <defOfBuilding>Fire</defOfBuilding>
+              <ticksToBuild>10000</ticksToBuild>
+              <maxBuildingsPerMap>10</maxBuildingsPerMap>
+              <acceptedTerrains>
+                <li>Soil</li>
+                <li>MossyTerrain</li>
+                <li>MarshyTerrain</li>
+                <li>SoilRich</li>
+                <li>Gravel</li>
+                <li>Sand</li>
+                <li>SoftSand</li>
+                <li>StrawMatting</li>
+                <li>WoodPlankFloor</li>
+                <li>CarpetRed</li>
+                <li>CarpetGreen</li>
+                <li>CarpetBlue</li>
+                <li>CarpetCream</li>
+                <li>CarpetDark</li>	
+              </acceptedTerrains>
+            </li>
+          </value>
+      </Operation>
+
+    </caseTrue>
+  </Operation>
+
+</Patch>

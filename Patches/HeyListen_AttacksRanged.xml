@@ -1,0 +1,327 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<Patch>
+
+  <Operation Class="PatchOperationAdd">
+          <xpath>Defs</xpath>
+          <value>
+            <MVCF.ModDef>
+              <defName>MVCF_HeyListen</defName>
+              <label>Enable all features</label>
+              <description>All features will be enabled if this def is included.</description>
+              <Features>
+                <RangedAnimals>true</RangedAnimals>
+                <IntegratedToggle>true</IntegratedToggle>
+              </Features>
+            </MVCF.ModDef>
+          </value>
+  </Operation>
+
+<Operation Class="XmlExtensions.OptionalPatch">
+    <modId>HeyListen</modId>
+    <key>HeyListenPowerBeam</key>
+    <defaultValue>false</defaultValue>
+    <caseTrue>
+
+  <Operation Class="XmlExtensions.PatchOperationSafeAdd">
+          <xpath>Defs/ThingDef[defName="FF_Firefly"]</xpath>
+          <value>
+            <verbs>
+              <li>
+                <verbClass>Verb_PowerBeam</verbClass>
+                <label>hell fire</label>
+                <hasStandardCommand>true</hasStandardCommand>
+                <minRange>20</minRange>
+                <range>30</range>
+                <forcedMissRadius>1</forcedMissRadius>
+                <warmupTime>3</warmupTime>
+                <ai_IsBuildingDestroyer>true</ai_IsBuildingDestroyer>
+                <soundCast>OrbitalBeam</soundCast>
+                <targetParams>
+                  <canTargetLocations>true</canTargetLocations>
+                </targetParams>
+                <requireLineOfSight>false</requireLineOfSight>
+              </li>
+            </verbs>
+          </value>
+  </Operation>
+
+    </caseTrue>
+</Operation>
+
+<Operation Class="XmlExtensions.OptionalPatch">
+    <modId>HeyListen</modId>
+    <key>HeyListenFireStream</key>
+    <defaultValue>false</defaultValue>
+    <caseTrue>
+
+  <Operation Class="XmlExtensions.PatchOperationSafeAdd">
+          <xpath>Defs/ThingDef[defName="FF_Firefly"]</xpath>
+          <value>
+            <verbs>
+              <li>
+                <verbClass>Verb_Shoot</verbClass>
+                <accuracyTouch>1</accuracyTouch>
+                <accuracyShort>1</accuracyShort>
+                <accuracyMedium>.85</accuracyMedium>
+                <accuracyLong>.75</accuracyLong>
+                <hasStandardCommand>true</hasStandardCommand>
+                <defaultProjectile>Bast_FireStream</defaultProjectile>
+                <warmupTime>4</warmupTime>
+                <burstShotCount>1</burstShotCount>
+                <minRange>3</minRange>
+                <range>12</range>
+                <soundCast>Bast_FireStream</soundCast>
+                <muzzleFlashScale>0</muzzleFlashScale>
+                <label>blazing fire</label>
+                <commonality>1</commonality>
+              </li>
+            </verbs>
+          </value>
+  </Operation>
+
+    </caseTrue>
+</Operation>
+
+<Operation Class="XmlExtensions.OptionalPatch">
+    <modId>HeyListen</modId>
+    <key>HeyListenLightningBolt</key>
+    <defaultValue>false</defaultValue>
+    <caseTrue>
+
+  <Operation Class="XmlExtensions.PatchOperationSafeAdd">
+          <xpath>Defs/ThingDef[defName="FF_Firefly"]</xpath>
+          <value>
+            <verbs>
+              <li>
+                <verbClass>Verb_Shoot</verbClass>
+                <accuracyTouch>1</accuracyTouch>
+                <accuracyShort>.95</accuracyShort>
+                <accuracyMedium>.75</accuracyMedium>
+                <accuracyLong>.60</accuracyLong>
+                <hasStandardCommand>true</hasStandardCommand>
+                <defaultProjectile>Bast_LightningBolt</defaultProjectile>
+                <warmupTime>4</warmupTime>
+                <burstShotCount>3</burstShotCount>
+                <minRange>1</minRange>
+                <range>25</range>
+                <soundCast>Thunder_OnMap</soundCast>
+                <muzzleFlashScale>0</muzzleFlashScale>
+                <label>lightning bolt</label>
+                <commonality>.5</commonality>
+              </li>
+            </verbs>
+          </value>
+  </Operation>
+
+    </caseTrue>
+</Operation>
+
+<Operation Class="XmlExtensions.OptionalPatch">
+    <modId>HeyListen</modId>
+    <key>HeyListenAcidBreath</key>
+    <defaultValue>false</defaultValue>
+    <caseTrue>
+
+  <Operation Class="XmlExtensions.PatchOperationSafeAdd">
+          <xpath>Defs/ThingDef[defName="FF_Firefly"]</xpath>
+          <value>
+            <verbs>
+              <li>
+                <verbClass>Verb_Shoot</verbClass>
+                <accuracyTouch>0.15</accuracyTouch>
+                <accuracyShort>0.25</accuracyShort>
+                <accuracyMedium>0.15</accuracyMedium>
+                <accuracyLong>0.1</accuracyLong>
+                <hasStandardCommand>true</hasStandardCommand>
+                <defaultProjectile>MM_AcidicBreath</defaultProjectile>
+                <warmupTime>0.3</warmupTime>
+                <ticksBetweenBurstShots>2</ticksBetweenBurstShots>
+                <label>acidic breath</label>
+                <burstShotCount>120</burstShotCount>
+                <minRange>1</minRange>
+                <range>15</range>
+                <soundCast>MM_PoisonBreathSound</soundCast>
+                <muzzleFlashScale>0</muzzleFlashScale>				
+                <commonality>0.8</commonality>
+              </li>
+            </verbs>
+          </value>
+  </Operation>
+
+    </caseTrue>
+</Operation>
+
+<Operation Class="XmlExtensions.OptionalPatch">
+    <modId>HeyListen</modId>
+    <key>HeyListenFlameBreath</key>
+    <defaultValue>false</defaultValue>
+    <caseTrue>
+
+  <Operation Class="XmlExtensions.PatchOperationSafeAdd">
+          <xpath>Defs/ThingDef[defName="FF_Firefly"]</xpath>
+          <value>
+            <verbs>
+              <li>
+                <verbClass>Verb_Shoot</verbClass>
+                <accuracyTouch>0.8</accuracyTouch>
+                <accuracyShort>1</accuracyShort>
+                <accuracyMedium>0.95</accuracyMedium>
+                <accuracyLong>0.8</accuracyLong>
+                <hasStandardCommand>true</hasStandardCommand>
+                <defaultProjectile>MM_FlameBreathAnimated</defaultProjectile>
+                <warmupTime>2.5</warmupTime>
+                <burstShotCount>2</burstShotCount>
+                <label>fire breath</label>
+                <minRange>2</minRange>
+                <range>15</range>
+                <soundCast>MM_FireBreathSound</soundCast>
+                <muzzleFlashScale>0</muzzleFlashScale>
+                <commonality>0.8</commonality>
+              </li>
+            </verbs>
+          </value>
+  </Operation>
+
+    </caseTrue>
+</Operation>
+
+<Operation Class="XmlExtensions.OptionalPatch">
+    <modId>HeyListen</modId>
+    <key>HeyListenPoisonBreath</key>
+    <defaultValue>false</defaultValue>
+    <caseTrue>
+
+  <Operation Class="XmlExtensions.PatchOperationSafeAdd">
+          <xpath>Defs/ThingDef[defName="FF_Firefly"]</xpath>
+          <value>
+            <verbs>
+              <li>
+                <verbClass>Verb_Shoot</verbClass>
+                <accuracyTouch>1</accuracyTouch>
+                <accuracyShort>1</accuracyShort>
+                <accuracyMedium>1</accuracyMedium>
+                <accuracyLong>1</accuracyLong>
+                <hasStandardCommand>true</hasStandardCommand>
+                <defaultProjectile>MM_GreenStreamBreath</defaultProjectile>
+                <warmupTime>1.5</warmupTime>
+                <burstShotCount>1</burstShotCount>
+                <minRange>1</minRange>
+                <range>8</range>				
+                <soundCast>MM_PoisonBreathSound</soundCast>
+                <muzzleFlashScale>0</muzzleFlashScale>
+                <label>poison breath</label>
+                <commonality>1</commonality>
+              </li>
+            </verbs>
+          </value>
+  </Operation>
+
+    </caseTrue>
+</Operation>
+
+<Operation Class="XmlExtensions.OptionalPatch">
+    <modId>HeyListen</modId>
+    <key>HeyListenLaserBeam</key>
+    <defaultValue>false</defaultValue>
+    <caseTrue>
+
+  <Operation Class="XmlExtensions.PatchOperationSafeAdd">
+          <xpath>Defs/ThingDef[defName="FF_Firefly"]</xpath>
+          <value>
+            <verbs>
+              <li>
+                <verbClass>Verb_Shoot</verbClass>
+                <accuracyTouch>1</accuracyTouch>
+                <accuracyShort>1</accuracyShort>
+                <accuracyMedium>1</accuracyMedium>
+                <accuracyLong>.75</accuracyLong>
+                <hasStandardCommand>true</hasStandardCommand>
+                <defaultProjectile>AA_LaserBullet</defaultProjectile>
+                <warmupTime>5</warmupTime>
+                <burstShotCount>1</burstShotCount>
+                <minRange>1</minRange>
+                <range>10</range>
+                <soundCast>AA_LaserBullet</soundCast>
+                <muzzleFlashScale>0</muzzleFlashScale>
+                <label>laser</label>
+                <commonality>.8</commonality>
+              </li>
+            </verbs>
+          </value>
+  </Operation>
+
+    </caseTrue>
+</Operation>
+
+<Operation Class="XmlExtensions.OptionalPatch">
+    <modId>HeyListen</modId>
+    <key>HeyListenFlamethrowerVWE</key>
+    <defaultValue>false</defaultValue>
+    <caseTrue>
+
+  <Operation Class="XmlExtensions.PatchOperationSafeAdd">
+          <xpath>Defs/ThingDef[defName="FF_Firefly"]</xpath>
+          <value>
+            <verbs>
+              <li>
+                <verbClass>Verb_Shoot</verbClass>
+                <accuracyTouch>1</accuracyTouch>
+                <accuracyShort>1</accuracyShort>
+                <accuracyMedium>1</accuracyMedium>
+                <accuracyLong>.75</accuracyLong>
+                <hasStandardCommand>true</hasStandardCommand>
+                <defaultProjectile>VWE_Bullet_Flamethrower</defaultProjectile>
+                <warmupTime>1.5</warmupTime>
+                <burstShotCount>20</burstShotCount>
+                <ticksBetweenBurstShots>3</ticksBetweenBurstShots>
+                <range>12.9</range>
+                <forcedMissRadius>2.9</forcedMissRadius>
+                <soundCast>VWE_Shot_Flamethrower</soundCast>
+                <soundCastTail>GunTail_Medium</soundCastTail>
+                <muzzleFlashScale>14</muzzleFlashScale>
+                <label>laser</label>
+                <commonality>.8</commonality>
+              </li>
+            </verbs>
+          </value>
+  </Operation>
+
+    </caseTrue>
+</Operation>
+
+<Operation Class="XmlExtensions.OptionalPatch">
+    <modId>HeyListen</modId>
+    <key>HeyListenLaserBeamVWE</key>
+    <defaultValue>false</defaultValue>
+    <caseTrue>
+
+  <Operation Class="XmlExtensions.PatchOperationSafeAdd">
+          <xpath>Defs/ThingDef[defName="FF_Firefly"]</xpath>
+          <value>
+            <verbs>
+              <li>
+                <verbClass>Verb_Shoot</verbClass>
+                <accuracyTouch>1</accuracyTouch>
+                <accuracyShort>1</accuracyShort>
+                <accuracyMedium>1</accuracyMedium>
+                <accuracyLong>.75</accuracyLong>
+                <hasStandardCommand>true</hasStandardCommand>
+                <defaultProjectile>VWEL_Bullet_LaserRifle</defaultProjectile>
+                <warmupTime>2</warmupTime>
+                <burstShotCount>1</burstShotCount>
+                <minRange>1</minRange>
+                <range>32.9</range>
+                <soundCast>VWE_LaserShot_Rifle</soundCast>
+                <soundCastTail>GunTail_Heavy</soundCastTail>
+                <muzzleFlashScale>14</muzzleFlashScale>
+                <label>laser</label>
+                <commonality>.8</commonality>
+              </li>
+            </verbs>
+          </value>
+  </Operation>
+
+    </caseTrue>
+</Operation>
+
+</Patch>

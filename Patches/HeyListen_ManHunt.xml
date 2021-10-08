@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<Patch>
+
+<Operation Class="XmlExtensions.OptionalPatch">
+    <modId>HeyListen</modId>
+    <key>HeyListenManHunt</key>
+    <defaultValue>false</defaultValue>
+    <caseTrue>
+
+  <Operation Class="XmlExtensions.UseSettings">
+    <modId>HeyListen</modId>
+    <keys>
+        <li>HeyListenManTame</li>
+        <li>HeyListenManDamage</li>
+    </keys>
+    <defaultValues>
+        <li>0</li>
+        <li>0</li>
+    </defaultValues> 
+    <apply>
+
+      <Operation Class="PatchOperationAdd">
+          <xpath>Defs/ThingDef[defName="FF_Firefly"]/race</xpath>
+          <value>
+            <manhunterOnTameFailChance>{HeyListenManTame}</manhunterOnTameFailChance>
+            <manhunterOnDamageChance>{HeyListenManDamage}</manhunterOnDamageChance>
+          </value>
+      </Operation>
+
+    </apply>
+  </Operation>
+
+    </caseTrue>
+</Operation>
+
+</Patch>

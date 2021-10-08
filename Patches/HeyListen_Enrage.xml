@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<Patch>
+
+  <Operation Class="XmlExtensions.OptionalPatch">
+    <modId>HeyListen</modId>
+    <key>HeyListenEnrage</key>
+    <defaultValue>false</defaultValue>  
+    <caseTrue>
+
+      <Operation Class="PatchOperationAdd">
+          <xpath>Defs/ThingDef[defName="FF_Firefly"]/comps</xpath>
+          <value>
+            <li Class="AnimalBehaviours.CompProperties_EnrageOtherPawns">
+              <pawnkinddefsToAffect>
+                <li>FF_FireflyKind</li>
+                <li>Megascarab</li>
+                <li>Spelopede</li>
+                <li>Megaspider</li>
+              </pawnkinddefsToAffect>
+            </li>
+          </value>
+      </Operation>
+
+    </caseTrue>
+  </Operation>
+
+</Patch>
