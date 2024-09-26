@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<Patch>
+
+<Operation Class="XmlExtensions.OptionalPatch">
+    <modId>HeyListen</modId>
+    <key>HeyListenMoodlet</key>
+    <defaultValue>false</defaultValue>
+    <caseTrue>
+
+  <Operation Class="PatchOperationAdd">
+          <xpath>Defs/ThingDef[defName="FF_Firefly"]/comps</xpath>
+          <value>
+			<li Class="AnimalBehaviours.CompProperties_ThoughtEffecter">
+				<radius>10</radius>
+				<tickInterval>500</tickInterval>
+				<thoughtDef>FF_Disgust</thoughtDef>
+			</li>
+          </value>
+  </Operation>
+
+  <Operation Class="XmlExtensions.UseSetting">
+    <modId>HeyListen</modId>
+    <key>HeyListenCthulhu</key>
+    <defaultValue>1</defaultValue>  
+    <apply>
+      <Operation Class="PatchOperationAdd">
+          <xpath>Defs</xpath>
+          <value>
+            <ThoughtDef>
+		<defName>FF_Disgust</defName>
+		<durationDays>1</durationDays>
+		<stackLimit>20</stackLimit>
+                <stackedEffectMultiplier>{HeyListenCthulhu}</stackedEffectMultiplier>
+		<stages>
+			<li>
+				<label>disgusting creature</label>
+				<description>If I hear "Hey Listen" one more time...</description>
+				<baseMoodEffect>-1</baseMoodEffect>
+			</li>
+		</stages>
+            </ThoughtDef>
+          </value>
+      </Operation>
+    </apply>
+  </Operation>
+
+    </caseTrue>
+</Operation>
+
+</Patch>

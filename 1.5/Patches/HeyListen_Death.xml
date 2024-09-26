@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<Patch>
+
+  <Operation Class="XmlExtensions.UseSetting">
+    <modId>HeyListen</modId>
+    <key>HeyListenDeath</key>
+    <defaultValue>0</defaultValue>  
+    <apply>
+
+    <Operation Class="XmlExtensions.PatchByCase">
+      <value>{HeyListenDeath}</value>
+      <cases>
+
+        <li>
+            <value>1</value>
+            <apply>
+
+  <Operation Class="PatchOperationAdd">
+          <xpath>Defs/ThingDef[defName="FF_Firefly"]/race</xpath>
+          <value>
+            <deathAction>
+              <workerClass>DeathActionWorker_SmallExplosion</workerClass>
+            </deathAction>
+          </value>
+  </Operation>
+
+            </apply>
+        </li>
+
+        <li>
+            <value>2</value>
+            <apply>
+
+  <Operation Class="PatchOperationAdd">
+          <xpath>Defs/ThingDef[defName="FF_Firefly"]/race</xpath>
+          <value>
+            <deathAction>
+              <workerClass>DeathActionWorker_BigExplosion</workerClass>
+            </deathAction>
+          </value>
+  </Operation>
+
+            </apply>
+        </li>
+
+      </cases>
+    </Operation>
+
+    </apply>
+  </Operation>
+
+</Patch>

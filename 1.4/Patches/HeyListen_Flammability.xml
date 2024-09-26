@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<Patch>
+
+  <Operation Class="XmlExtensions.UseSetting">
+    <modId>HeyListen</modId>
+    <key>HeyListenFlammability</key>
+    <defaultValue>0</defaultValue>  
+    <apply>
+
+  <Operation Class="PatchOperationReplace">
+          <xpath>Defs/ThingDef[defName="FF_Firefly"]/statBases/Flammability</xpath>
+          <value>
+            <Flammability>{HeyListenFlammability}</Flammability>
+          </value>
+  </Operation>
+
+    </apply>
+  </Operation>
+
+</Patch>

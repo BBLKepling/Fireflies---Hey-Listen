@@ -1,0 +1,124 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<Patch>
+
+  <Operation Class="XmlExtensions.OptionalPatch">
+    <modId>HeyListen</modId>
+    <key>HeyListenAnimalInsanityMass</key>
+    <defaultValue>false</defaultValue>  
+    <caseTrue>
+
+      <Operation Class="PatchOperationAdd">
+          <xpath>Defs/ThingDef[defName="FF_Firefly"]/comps</xpath>
+          <value>
+            <li Class="AnimalBehaviours.CompProperties_CauseIncident">
+              <checkingInterval>45000</checkingInterval>
+              <requiresTamed>false</requiresTamed>
+              <incidentToCause>AnimalInsanityMass</incidentToCause>
+            </li>
+          </value>
+      </Operation>
+
+    </caseTrue>
+  </Operation>
+
+  <Operation Class="XmlExtensions.OptionalPatch">
+    <modId>HeyListen</modId>
+    <key>HeyListenAnimalInsanitySingle</key>
+    <defaultValue>false</defaultValue>  
+    <caseTrue>
+
+      <Operation Class="PatchOperationAdd">
+          <xpath>Defs/ThingDef[defName="FF_Firefly"]/comps</xpath>
+          <value>
+            <li Class="AnimalBehaviours.CompProperties_CauseIncident">
+              <checkingInterval>45000</checkingInterval>
+              <requiresTamed>false</requiresTamed>
+              <incidentToCause>AnimalInsanitySingle</incidentToCause>
+            </li>
+          </value>
+      </Operation>
+
+    </caseTrue>
+  </Operation>
+
+  <Operation Class="XmlExtensions.OptionalPatch">
+    <modId>HeyListen</modId>
+    <key>HeyListenFlashstorm</key>
+    <defaultValue>false</defaultValue>  
+    <caseTrue>
+
+      <Operation Class="PatchOperationAdd">
+          <xpath>Defs/ThingDef[defName="FF_Firefly"]/comps</xpath>
+          <value>
+            <li Class="AnimalBehaviours.CompProperties_CauseIncident">
+              <checkingInterval>45000</checkingInterval>
+              <requiresTamed>false</requiresTamed>
+              <incidentToCause>Flashstorm</incidentToCause>
+            </li>
+          </value>
+      </Operation>
+
+    </caseTrue>
+  </Operation>
+
+  <Operation Class="XmlExtensions.OptionalPatch">
+    <modId>HeyListen</modId>
+    <key>HeyListenManhunterPack</key>
+    <defaultValue>false</defaultValue>  
+    <caseTrue>
+
+      <Operation Class="PatchOperationAdd">
+          <xpath>Defs/ThingDef[defName="FF_Firefly"]/comps</xpath>
+          <value>
+            <li Class="AnimalBehaviours.CompProperties_CauseIncident">
+              <checkingInterval>45000</checkingInterval>
+              <requiresTamed>false</requiresTamed>
+              <incidentToCause>ManhunterPack</incidentToCause>
+            </li>
+          </value>
+      </Operation>
+
+    </caseTrue>
+  </Operation>
+
+  <Operation Class="XmlExtensions.OptionalPatch">
+    <modId>HeyListen</modId>
+    <key>HeyListenRaidEnemy</key>
+    <defaultValue>false</defaultValue>  
+    <caseTrue>
+
+      <Operation Class="PatchOperationAdd">
+          <xpath>Defs/ThingDef[defName="FF_Firefly"]/comps</xpath>
+          <value>
+            <li Class="AnimalBehaviours.CompProperties_CauseIncident">
+              <checkingInterval>45000</checkingInterval>
+              <requiresTamed>false</requiresTamed>
+              <incidentToCause>RaidEnemy</incidentToCause>
+            </li>
+          </value>
+      </Operation>
+
+    </caseTrue>
+  </Operation>
+
+  <Operation Class="XmlExtensions.OptionalPatch">
+    <modId>HeyListen</modId>
+    <key>HeyListenShortCircuit</key>
+    <defaultValue>false</defaultValue>  
+    <caseTrue>
+
+      <Operation Class="PatchOperationAdd">
+          <xpath>Defs/ThingDef[defName="FF_Firefly"]/comps</xpath>
+          <value>
+            <li Class="AnimalBehaviours.CompProperties_CauseIncident">
+              <checkingInterval>45000</checkingInterval>
+              <requiresTamed>false</requiresTamed>
+              <incidentToCause>ShortCircuit</incidentToCause>
+            </li>
+          </value>
+      </Operation>
+
+    </caseTrue>
+  </Operation>
+
+</Patch>

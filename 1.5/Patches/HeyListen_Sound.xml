@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<Patch>
+
+<Operation Class="XmlExtensions.OptionalPatch">
+    <modId>HeyListen</modId>
+    <key>HeyListenSound</key>
+    <defaultValue>false</defaultValue>
+    <caseTrue>
+
+  <Operation Class="PatchOperationAdd">
+          <xpath>Defs/ThingDef[defName="FF_Firefly"]/race/lifeStageAges/li[def="FireflyAdult"]</xpath>
+          <value>
+            <!-- <soundWounded>Hey_WatchOut</soundWounded> -->
+            <soundDeath>Hey_Death</soundDeath>
+            <soundCall>Hey_Listen</soundCall>
+            <soundAngry>Hey_Angry</soundAngry>
+          </value>
+  </Operation>
+
+    </caseTrue>
+    <caseFalse>
+	
+  <Operation Class="PatchOperationAttributeSet">
+    <xpath>Defs/SoundDef[defName="Hey_Death" or defName="Hey_Listen" or defName="Hey_Angry"]</xpath>
+    <attribute>Abstract</attribute>
+    <value>true</value>
+  </Operation>
+
+    </caseFalse>
+</Operation>
+
+</Patch>

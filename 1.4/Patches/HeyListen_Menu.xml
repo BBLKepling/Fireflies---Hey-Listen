@@ -1,0 +1,248 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<Patch>
+
+  <Operation Class="PatchOperationAdd">
+          <xpath>Defs</xpath>
+          <value>
+  <XmlExtensions.SettingsMenuDef>
+    <defName>HeyListen</defName>
+    <modId>HeyListen</modId>
+    <label>Hey Listen</label>
+    <settings>
+
+        <li Class="XmlExtensions.Setting.Text">
+            <text>All settings require restart to take effect.</text>
+            <anchor>Middle</anchor>
+        </li>
+
+        <li Class="XmlExtensions.Setting.GapLine" />
+
+        <li Class="XmlExtensions.Setting.Text">
+            <text>"Hey Listen" Moodlet</text>
+            <anchor>Middle</anchor>
+        </li>
+
+        <li Class="XmlExtensions.Setting.Checkbox">
+            <key>HeyListenMoodlet</key>
+            <label>Use Moodlet</label>
+        </li>
+
+        <li Class="XmlExtensions.Setting.Checkbox">
+            <key>HeyListenSound</key>
+            <label>Navi Sound Effects (Has no effect on moodlet)</label>
+        </li>
+
+        <li Class="XmlExtensions.Setting.Slider">
+            <key>HeyListenCthulhu</key>
+            <label>Cthulhu Multiplier for Moodlet - {HeyListenCthulhu}</label>
+            <min>1</min>
+            <max>2</max>
+            <decimals>1</decimals>
+            <defaultValue>1</defaultValue>  
+        </li>
+
+        <li Class="XmlExtensions.Setting.GapLine" />
+
+        <li Class="XmlExtensions.Setting.Text">
+            <text>Attacks</text>
+            <anchor>Middle</anchor>
+        </li>
+
+  <li Class="XmlExtensions.Setting.SplitColumn">
+    <leftCol>
+        <li Class="XmlExtensions.Setting.Text">
+            <text>Melee</text>
+            <anchor>Middle</anchor>
+        </li>
+        <li Class="XmlExtensions.Setting.GapLine" />
+        <li Class="XmlExtensions.Setting.Checkbox">
+            <key>HeyListenHeadbutt</key>
+            <label>Headbutt</label>
+        </li>
+        <li Class="XmlExtensions.Setting.Checkbox">
+            <key>HeyListenFlameButt</key>
+            <label>Flame Headbutt</label>
+        </li>
+        <li Class="XmlExtensions.Setting.Checkbox">
+            <key>HeyListenStunButt</key>
+            <label>Stun Headbutt</label>
+        </li>
+    </leftCol>
+    <rightCol>
+        <li Class="XmlExtensions.Setting.Text">
+            <text>Ranged</text>
+            <anchor>Middle</anchor>
+        </li>
+        <li Class="XmlExtensions.Setting.GapLine" />
+        <li Class="XmlExtensions.Setting.Checkbox">
+            <key>HeyListenPowerBeam</key>
+            <label>Orbital Power Beam</label>
+        </li>
+        <li Class="XmlExtensions.Setting.Checkbox" MayRequire="Scurvyez.Bastyon">
+            <key>HeyListenFireStream</key>
+            <label>Fire Stream (Bastyon)</label>
+        </li>
+        <li Class="XmlExtensions.Setting.Checkbox" MayRequire="Scurvyez.Bastyon">
+            <key>HeyListenLightningBolt</key>
+            <label>Lightning Bolt (Bastyon)</label>
+        </li>
+        <li Class="XmlExtensions.Setting.Checkbox" MayRequire="sarg.magicalmenagerie">
+            <key>HeyListenAcidBreath</key>
+            <label>Acid Breath (Magical Menagerie)</label>
+        </li>
+        <li Class="XmlExtensions.Setting.Checkbox" MayRequire="sarg.magicalmenagerie">
+            <key>HeyListenFlameBreath</key>
+            <label>Flame Breath (Magical Menagerie)</label>
+        </li>
+        <li Class="XmlExtensions.Setting.Checkbox" MayRequire="sarg.magicalmenagerie">
+            <key>HeyListenPoisonBreath</key>
+            <label>Poison Breath (Magical Menagerie)</label>
+        </li>
+        <li Class="XmlExtensions.Setting.Checkbox" MayRequire="sarg.alphaanimals">
+            <key>HeyListenLaserBeam</key>
+            <label>Freaking Laser Beam Eyes (Alpha Animals)</label>
+        </li>
+        <li Class="XmlExtensions.Setting.Checkbox" MayRequire="VanillaExpanded.VWE">
+            <key>HeyListenFlamethrowerVWE</key>
+            <label>Flamethrower (VWE)</label>
+        </li>
+        <li Class="XmlExtensions.Setting.Checkbox" MayRequire="VanillaExpanded.VWEL">
+            <key>HeyListenLaserBeamVWE</key>
+            <label>Freaking Laser Beam Eyes (VWE - Laser)</label>
+        </li>
+    </rightCol>
+  </li>
+
+        <li Class="XmlExtensions.Setting.GapLine" />
+
+        <li Class="XmlExtensions.Setting.Text">
+            <text>Death</text>
+            <anchor>Middle</anchor>
+        </li>
+        <li Class="XmlExtensions.Setting.RadioButtons">
+            <key>HeyListenDeath</key>
+            <buttons>
+              <li>
+                <label>No Explosion</label>
+                <value>0</value>
+              </li>
+              <li>
+                <label>Small Explosion</label>
+                <value>1</value>
+              </li>
+              <li>
+                <label>Large Explosion</label>
+                <value>2</value>
+              </li>
+            </buttons>
+        </li>
+
+        <li Class="XmlExtensions.Setting.GapLine" />
+
+        <li Class="XmlExtensions.Setting.Text">
+            <text>Aggression</text>
+            <anchor>Middle</anchor>
+        </li>
+        <li Class="XmlExtensions.Setting.Checkbox">
+            <key>HeyListenManHunt</key>
+            <label>Manhunter</label>
+        </li>
+        <li Class="XmlExtensions.Setting.Checkbox">
+            <key>HeyListenEnrage</key>
+            <label>Enrage insects if fireflies are attacked(Experimental)</label>
+        </li>
+        <li Class="XmlExtensions.Setting.Slider">
+            <key>HeyListenManTame</key>
+            <label>Manhunter On Tame Fail Chance - {HeyListenManTame}</label>
+            <min>0</min>
+            <max>1</max>
+            <decimals>2</decimals>
+            <defaultValue>0</defaultValue>  
+        </li>
+        <li Class="XmlExtensions.Setting.Slider">
+            <key>HeyListenManDamage</key>
+            <label>Manhunter On Damage Chance - {HeyListenManDamage}</label>
+            <min>0</min>
+            <max>1</max>
+            <decimals>2</decimals>
+            <defaultValue>0</defaultValue>  
+        </li>
+
+        <li Class="XmlExtensions.Setting.GapLine" />
+
+        <li Class="XmlExtensions.Setting.Text">
+            <text>Cause events periodically</text>
+            <anchor>Middle</anchor>
+        </li>
+        <li Class="XmlExtensions.Setting.Checkbox">
+            <key>HeyListenAnimalInsanityMass</key>
+            <label>Animal Insanity Mass</label>
+        </li>
+        <li Class="XmlExtensions.Setting.Checkbox">
+            <key>HeyListenAnimalInsanitySingle</key>
+            <label>Animal Insanity Single</label>
+        </li>
+        <li Class="XmlExtensions.Setting.Checkbox">
+            <key>HeyListenFlashstorm</key>
+            <label>Flashstorm</label>
+        </li>
+        <li Class="XmlExtensions.Setting.Checkbox">
+            <key>HeyListenManhunterPack</key>
+            <label>Manhunter Pack</label>
+        </li>
+        <li Class="XmlExtensions.Setting.Checkbox">
+            <key>HeyListenRaidEnemy</key>
+            <label>Raid Enemy</label>
+        </li>
+        <li Class="XmlExtensions.Setting.Checkbox">
+            <key>HeyListenShortCircuit</key>
+            <label>Short Circuit</label>
+        </li>
+
+        <li Class="XmlExtensions.Setting.GapLine" />
+
+        <li Class="XmlExtensions.Setting.Text">
+            <text>Other Stats and Behaviors</text>
+            <anchor>Middle</anchor>
+        </li>
+        <li Class="XmlExtensions.Setting.Checkbox">
+            <key>HeyListenFireStart</key>
+            <label>Will start fires</label>
+        </li>
+        <li Class="XmlExtensions.Setting.Checkbox" MayRequire="VanillaExpanded.VWE">
+            <key>HeyListenToxinGas</key>
+            <label>Speads toxin gas(plague) and gives toxic immunity (VWE)</label>
+        </li>
+        <li Class="XmlExtensions.Setting.Checkbox">
+            <key>HeyListenTStorm</key>
+            <label>Cause dry thunderstorms when spawning</label>
+        </li>
+        <li Class="XmlExtensions.Setting.Checkbox">
+            <key>HeyListenFuelFilth</key>
+            <label>Cause fuel filth to drop</label>
+        </li>
+        <li Class="XmlExtensions.Setting.Slider">
+            <key>HeyListenFlammability</key>
+            <label>Flammability - {HeyListenFlammability}</label>
+            <min>0</min>
+            <max>100</max>
+            <decimals>0</decimals>
+        </li>
+        <li Class="XmlExtensions.Setting.Slider">
+            <key>HeyListenHunger</key>
+            <label>Hunger Rate - {HeyListenHunger}</label>
+            <min>0.01</min>
+            <max>1</max>
+            <decimals>2</decimals>
+        </li>
+
+        <li Class="XmlExtensions.Setting.GapLine" />    
+
+        <li Class="XmlExtensions.Setting.ResetSettings" /> 
+
+    </settings>
+  </XmlExtensions.SettingsMenuDef>
+          </value>
+  </Operation>
+
+</Patch>

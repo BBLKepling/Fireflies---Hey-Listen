@@ -38,6 +38,7 @@
             <min>1</min>
             <max>2</max>
             <decimals>1</decimals>
+            <defaultValue>1</defaultValue>  
         </li>
 
         <li Class="XmlExtensions.Setting.GapLine" />
@@ -156,6 +157,7 @@
             <min>0</min>
             <max>1</max>
             <decimals>2</decimals>
+            <defaultValue>0</defaultValue>  
         </li>
         <li Class="XmlExtensions.Setting.Slider">
             <key>HeyListenManDamage</key>
@@ -163,6 +165,7 @@
             <min>0</min>
             <max>1</max>
             <decimals>2</decimals>
+            <defaultValue>0</defaultValue>  
         </li>
 
         <li Class="XmlExtensions.Setting.GapLine" />

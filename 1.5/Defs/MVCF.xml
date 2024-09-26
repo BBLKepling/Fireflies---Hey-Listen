@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Defs>
+
+  <MVCF.ModDef>
+    <defName>MVCF_HeyListen</defName>
+    <label>Enable all features</label>
+    <description>All features will be enabled if this def is included.</description>
+    <ActivateFeatures>
+      <li>RangedAnimals</li>
+      <li>IntegratedToggle</li>
+    </ActivateFeatures>
+  </MVCF.ModDef>
+			
+</Defs>

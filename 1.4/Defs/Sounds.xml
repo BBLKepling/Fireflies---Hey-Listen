@@ -1,0 +1,98 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Defs>
+
+  <SoundDef>
+    <defName>Hey_Death</defName>
+    <context>MapOnly</context>
+    <subSounds>
+      <li>
+        <grains>
+          <li Class="AudioGrain_Clip">
+            <clipPath>Navi/Navi_Hey1</clipPath>
+          </li>
+          <li Class="AudioGrain_Clip">
+            <clipPath>Navi/Navi_Hey2</clipPath>
+          </li>
+          <li Class="AudioGrain_Clip">
+            <clipPath>Navi/Navi_Death1</clipPath>
+          </li>
+          <li Class="AudioGrain_Clip">
+            <clipPath>Navi/Navi_Death2</clipPath>
+          </li>
+          <li Class="AudioGrain_Clip">
+            <clipPath>Navi/Navi_Death3</clipPath>
+          </li>
+        </grains>
+        <volumeRange>25~30</volumeRange>
+        <pitchRange>0.9311764~1.068824</pitchRange>
+        <distRange>0~70</distRange>
+        <sustainLoop>False</sustainLoop>
+      </li>
+    </subSounds>
+  </SoundDef>
+
+  <SoundDef>
+    <defName>Hey_Listen</defName>
+    <context>MapOnly</context>
+    <subSounds>
+      <li>
+        <grains>
+          <li Class="AudioGrain_Clip">
+            <clipPath>Navi/Navi_Hey1</clipPath>
+          </li>
+          <li Class="AudioGrain_Clip">
+            <clipPath>Navi/Navi_Hey2</clipPath>
+          </li>
+          <li Class="AudioGrain_Clip">
+            <clipPath>Navi/Navi_HeyListen</clipPath>
+          </li>
+          <li Class="AudioGrain_Clip">
+            <clipPath>Navi/Navi_Listen1</clipPath>
+          </li>
+          <li Class="AudioGrain_Clip">
+            <clipPath>Navi/Navi_Listen2</clipPath>
+          </li>
+          <li Class="AudioGrain_Clip">
+            <clipPath>Navi/Navi_Look1</clipPath>
+          </li>
+          <li Class="AudioGrain_Clip">
+            <clipPath>Navi/Navi_Look2</clipPath>
+          </li>
+        </grains>
+        <volumeRange>25~30</volumeRange>
+        <pitchRange>0.9311764~1.068824</pitchRange>
+        <distRange>0~70</distRange>
+        <sustainLoop>False</sustainLoop>
+        <repeatMode>NeverTwice</repeatMode>
+      </li>
+    </subSounds>
+  </SoundDef>
+
+  <SoundDef>
+    <defName>Hey_Angry</defName>
+    <context>MapOnly</context>
+    <subSounds>
+      <li>
+        <grains>
+          <li Class="AudioGrain_Clip">
+            <clipPath>Navi/Navi_HeyListen</clipPath>
+          </li>
+          <li Class="AudioGrain_Clip">
+            <clipPath>Navi/Navi_Wounded</clipPath>
+          </li>
+          <li Class="AudioGrain_Clip">
+            <clipPath>Navi/Navi_WatchOut1</clipPath>
+          </li>
+          <li Class="AudioGrain_Clip">
+            <clipPath>Navi/Navi_WatchOut2</clipPath>
+          </li>
+        </grains>
+        <volumeRange>25~30</volumeRange>
+        <pitchRange>0.9311764~1.068824</pitchRange>
+        <distRange>0~70</distRange>
+        <sustainLoop>False</sustainLoop>
+      </li>
+    </subSounds>
+  </SoundDef>
+
+</Defs>

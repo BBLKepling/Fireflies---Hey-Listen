@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<Patch>
+
+  <Operation Class="XmlExtensions.UseSetting">
+    <modId>HeyListen</modId>
+    <key>HeyListenHunger</key>
+    <defaultValue>0.01</defaultValue>  
+    <apply>
+
+  <Operation Class="PatchOperationReplace">
+          <xpath>Defs/ThingDef[defName="FF_Firefly"]/race/baseHungerRate</xpath>
+          <value>
+            <baseHungerRate>{HeyListenHunger}</baseHungerRate>
+          </value>
+  </Operation>
+
+    </apply>
+  </Operation>
+
+</Patch>
